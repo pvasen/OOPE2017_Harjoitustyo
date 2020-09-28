@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>830</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.omalista::OmaLista
+--
+--
++hae(Object haettava): Object
++lisaa(Object uusi): boolean
++poista(Object poistettava): Object
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>820</y>
+      <w>240</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.tiedot::Tiedosto
+--
+-koko: int
+--
++Tiedosto(StringBuilder n, int k): ctor
++Tiedosto(Tiedosto kopioitava): ctor
++koko(): int
++koko(int k): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>1380</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>oope2017ht::Oope2017HT
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>320</y>
+      <w>260</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>fi.uta.csjola.oope.lista::LinkitettyLista
+--
+-paa: Solmu
+-hanta: Solmu
+--
++LinkitettyLista(): ctor
+#paa(): Solmu
+#hanta(): Solmu
+-haeSolmu(int paikka): Solmu
++lisaaAlkuun(Object alkio): void
++lisaaLoppuun(Object alkio): void
++lisaa(int paikka, Object alkio): boolean
++poistaAlusta(): Object
++poistaLopusta(): Object
++poista(int paikka): Object
++alkio(int paikka): Object
++korvaa(int paikka, Object alkio): Object
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>30</y>
+      <w>260</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>/fi.uta.csjola.oope.lista::AbstraktiLista/
+--
+#koko: int
+--
++AbstraktiLista(): ctor
+#paikkaOK(int paikka): boolean
++lisaaAlkuun(Object alkio): void
++lisaaLoppuun(Object alkio): void
++lisaa(int paikka, Object alkio): boolean
++poistaAlusta(): Object
++poistaLopusta(): Object
++poista(int paikka): Object
++alkio(int paikka): Object
++korvaa(int paikka, Object alkio): Object
++koko(): int
++onkoTyhja(): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>360</y>
+      <w>260</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+fi.uta.csjola.oope.lista::Lista
+--
+--
++lisaaAlkuun(Object alkio): void
++lisaaLoppuun(Object alkio): void
++lisaa(int paikka, Object alkio): boolean
++poistaAlusta(): Object
++poistaLopusta(): Object
++poista(int paikka): Object
++alkio(int paikka): Object
++korvaa(int paikka, Object alkio): Object
++koko(): int
++onkoTyhja(): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1660</x>
+      <y>600</y>
+      <w>270</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>apulaiset::In
+--
+-READER = initializeREADER(): Scanner
+-BARF = "Virheellinen syöte!": String
+-AARGH = "Virhe In-luokassa!": String
+--
+-initializeREADER(): Scanner
+-doNotSoGracefulExit(Exception e): void
++readInt(): int
++readDouble(): double
++readChar(): char
++readString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>90</y>
+      <w>200</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>fi.uta.csjola.oope.lista::Solmu
+--
+-alkio: Object
+-seuraava: Solmu
+--
++Solmu(Object uusi): ctor
++alkio(Object uusi): void
++alkio(): Object
++seuraava(Solmu s): void
++seuraava(): Solmu
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1710</x>
+      <y>820</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+apulaiset::Komennettava
+--
+--
++sisalto(): LinkitettyLista
++hae(String nimi): T
++lisaa(T lisattava): boolean
++poista(String nimi): T
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1670</x>
+      <y>980</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+apulaiset::Ooperoiva
+--
+--
++hae(Object haettava): Object
++lisaa(Object uusi): boolean
++poista(Object poistettava): Object
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>820</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.tiedot::Tieto
+--
+-tiedonNimi: StringBuilder
+--
++Tieto(n : StringBuilder)
++Tieto(haettava : Tieto)
++tiedoNimi(sb : StringBuilder) : void
++tiedonNimi(): StringBuilder
++toString(): String
++compareTo(vertailtava: Tieto): int
++equals(obj: Object) : boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>1060</y>
+      <w>670</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>650.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>920</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>890</y>
+      <w>590</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>570.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>820</y>
+      <w>1500</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1480.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>880</y>
+      <w>490</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;470.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>470</y>
+      <w>130</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>1160</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>60.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>1220</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..3</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>270</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>300</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>300</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1650</x>
+      <y>560</y>
+      <w>310</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>apulaiset
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>0</y>
+      <w>620</w>
+      <h>610</h>
+    </coordinates>
+    <panel_attributes>fi.uta.csjola.oope.lista
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>640</x>
+      <y>780</y>
+      <w>530</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.tiedot
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>50</x>
+      <y>800</y>
+      <w>290</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.omalista
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>30</x>
+      <y>760</y>
+      <w>1180</w>
+      <h>830</h>
+    </coordinates>
+    <panel_attributes>oope2017ht
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>1010</y>
+      <w>290</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>oope2017ht::Tulkki
+--
+~ylos = "..": String
+--
++Tulkki(): ctor
++nykyHakemisto(Hakemisto nimi): void
++nykyinen(): Hakemisto
++juuri(): Hakemisto
++aliHakemisto(): Hakemisto
++md(String nimi): void
++cd(String nimi): void
++cd(): void
++mf(String nimi, int koko): void
++rm(String nimi): void
++mv(String vanhaNimi, String uusiNimi): void
++ls(): void
++ls(String nimi): void
++cp(String vanhaNimi, String uusiNimi): void
++find(): void
++exit(boolean b): boolean
++puunTulostus(Hakemisto hakemisto): void
++polunTulostus(Hakemisto polunNimi): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>1050</y>
+      <w>210</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>oope2017ht::Kayttoliittyma
+--
+~md = "md": String
+~cd = "cd": String
+~rm = "rm": String
+~mf = "mf": String
+~mv = "mv": String
+~ls = "ls": String
+~cp = "cp": String
+~find = "find": String
+~exit = "exit": String
+~virhe = "Error!": String
+-tulkki: Tulkki
+--
++Kayttoliittyma(): ctor
++ohjelmanKaynnistys(): void
++jako(String taulukoon): String[]
++lopetus(): void
++virhe(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>1030</y>
+      <w>270</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>oope2017ht.tiedot::Hakemisto
+--
++jakoviiva = '/': char
+-sisalto: OmaLista
+-ylihakemisto: Hakemisto
+--
++Hakemisto(StringBuilder nimi, Hakemisto viite): ctor
++ylihakemisto(): Hakemisto
++sisalto(): LinkitettyLista
++hae(String haettavaNimi): Tieto
++lisaa(Tieto lisattava): boolean
++poista(String poistettavaNimi): Tieto
++valiaikainenTiedosto(String valiaikaisenTiedostonNimi): Tiedosto
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>30</y>
+      <w>150</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+1
+seuraava
+</panel_attributes>
+    <additional_attributes>40.0;120.0;70.0;120.0;70.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>1010</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+1
+ylihakemisto
+</panel_attributes>
+    <additional_attributes>30.0;90.0;70.0;90.0;70.0;10.0;10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>690</y>
+      <w>1600</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;360.0;1580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>1270</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>840</y>
+      <w>690</w>
+      <h>590</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>670.0;10.0;10.0;570.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>600</y>
+      <w>460</w>
+      <h>810</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;440.0;790.0</additional_attributes>
+  </element>
+</diagram>

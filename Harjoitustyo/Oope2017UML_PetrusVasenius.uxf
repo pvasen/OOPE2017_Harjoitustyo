@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>180</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Tieto
+--
+-tiedonNimi: StringBuilder n
+--
++Tieto(StringBuilder n)
++tiedonNimi(Stringbuilder n)
++tiedonNimi(): StringBuilder
++compareTo(StringBuilder i): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>300</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Oope2017
+--
++OhjelmanKäynnistys()
++KehoiteAluksi()
++VirheIlmoitus()
++Main()
+
+...
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>30</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Tiedosto
+--
+-koko: int 
+--
++koko(int k)
++koko(int k): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>80</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>OmaLista
+--
++Hae(Object haettava)
++Lisaa(Object lisattava)
++Poista(Object poistettava)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>430</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Apulaiset
+--
++Ooperoiva
++Komennettava&lt;&lt;T&gt;&gt;
++In
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>410</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*fi.uta.csjola.lista
+--
+LinkitettyLista
+Lista
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>270</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Hakemisto
+--
+-Sisalto: LinkitettyLista
+--
++Hae(String nimi): Tieto
++Lisaa(Tieto lisattava): Boolean
++Poista(String tiedonNimi): Tieto
++sisalto(): LinkitettyLista</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>320</y>
+      <w>380</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;360.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>110</y>
+      <w>80</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+Sisältää
+1..*</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>60</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Tulkki
+--
++Juuri(Hakemisto j)
+Komennon toteuttaminen
+Hakeminen hakemistosta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>180</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Käyttöliittymä?
+--
+Käyttöliittymälliset toiminnot</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
